@@ -10,6 +10,16 @@ const env = require('dotenv').config();
 const models = require('./models/database.js');
 
 const port = process.env.PORT || 8080;
+const fs = require('fs');
+const path = require('path');
+
+// ✅ Ensure uploads/ folder exists
+const uploadsDir = path.join(__dirname, 'uploads');
+if (!fs.existsSync(uploadsDir)) {
+  fs.mkdirSync(uploadsDir);
+  console.log('✅ uploads/ folder created at runtime');
+}
+
 
 // ✅ Middleware
 app.use(bodyParser.json());
