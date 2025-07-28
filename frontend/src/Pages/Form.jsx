@@ -38,7 +38,7 @@ function Form() {
 
     try {
       const token = localStorage.getItem('token');
-      const res = await axios.post('http://localhost:8080/print', data, {
+      const res = await axios.post('https://smartprint-backend.onrender.com/print', data, {
         headers: {
           'Content-Type': 'multipart/form-data',
           'Authorization': `Bearer ${token}`

@@ -80,7 +80,7 @@ function Queue() {
     const fetchQueue = async () => {
       try {
         const token = localStorage.getItem("token");
-        const res = await axios.get("http://localhost:8080/print/queue", {
+        const res = await axios.get("https://smartprint-backend.onrender.com/print/queue", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setQueue(res.data);
@@ -126,7 +126,7 @@ function Queue() {
 
     if (newTap >= 3 && selectedTokenId) {
       try {
-        await axios.put(`http://localhost:8080/print/jump/${selectedTokenId}`, {}, {
+        await axios.put(`https://smartprint-backend.onrender.com/print/jump/${selectedTokenId}`, {}, {
           headers: { Authorization: `Bearer ${token}` },
         });
 
@@ -147,7 +147,7 @@ function Queue() {
   const jumpToken = async (tokenId) => {
     try {
       const token = localStorage.getItem("token");
-      await axios.put(`http://localhost:8080/print/jump/${tokenId}`, {}, {
+      await axios.put(`https://smartprint-backend.onrender.com/print/jump/${tokenId}`, {}, {
         headers: { Authorization: `Bearer ${token}` },
       });
 
