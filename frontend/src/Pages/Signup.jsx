@@ -29,7 +29,7 @@ function Signup() {
             return handleError("All Items are Required");
         }
         try {
-            const url = "http://localhost:8080/auth/signup";
+            const url = "https://smartprint-backend.onrender.com/auth/signup";
             const response = await fetch(url, {
                 method: "POST",
                 headers: {
