@@ -1,0 +1,39 @@
+.congrats-wrapper {
+  background-color: #efff52;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.congrats-box {
+  background-color: white;
+  padding: 2rem 3rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.congrats-box h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.sub {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.token {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #111827;
+}
+
+.redirect {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: black
+}

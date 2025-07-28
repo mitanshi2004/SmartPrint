@@ -1,0 +1,208 @@
+.token-card {
+  position: relative;
+  margin-bottom: 12px;
+  background-color: white;
+  border-radius: 9999px;
+  padding: 12px 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.2s ease;
+  gap: 8px;
+}
+
+.token-card>span {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.token-card>div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.token-card {
+  position: relative;
+  margin-bottom: 32px;
+  /* more space below popup */
+  z-index: 1;
+}
+
+/* For Paid Tokens */
+.token-card.paid {
+  border: 2px solid#efff52;
+  /* green for paid */
+}
+
+/* Jump Button */
+.token-badge {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 9999px;
+  background-color: black;
+  color: #ffffff;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.token-badge:hover {
+  background-color: #efff52;
+  color: #000;
+}
+
+/* Drag Icon */
+.token-drag {
+  font-size: 20px;
+  cursor: grab;
+  user-select: none;
+  padding-left: 0px;
+}
+
+.jump-popup {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffffff;
+  /* bright yellow */
+  padding: 16px 14px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  width: 220px;
+  z-index: 999;
+  font-family: 'Lexend', sans-serif;
+  border: 2px solid #ffffff;
+  /* stronger yellow border */
+}
+
+.jump-popup p {
+  margin: 4px 0;
+  font-weight: 600;
+  font-size: 14px;
+  color: #1c1917;
+  /* dark brown for better visibility */
+}
+
+.jump-popup button {
+  margin-top: 8px;
+  background-color: #000;
+  color: #fff;
+  font-weight: bold;
+  padding: 8px 0;
+  width: 100%;
+  font-size: 14px;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.jump-popup button:hover {
+  background-color: #1f2937;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+  }
+}
+
+
+/* Queue container styles */
+.queue-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #efff52;
+  /* light green background for desktop */
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Inner content box */
+.queue-box {
+  background-color: #fefce8;
+  /* light yellow like your screenshot */
+  border-radius: 24px;
+  max-width: 400px;
+  width: 100%;
+  padding: 24px 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive text and spacing */
+.queue-box h2 {
+  font-family: 'Lexend', sans-serif;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.queue-box>div:first-of-type {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 14px;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.queue-box>div:nth-of-type(2) {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  background-color: white;
+  padding: 10px 16px;
+  border-radius: 9999px;
+  margin-bottom: 14px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.queue-box p {
+  font-size: 16px;
+  font-weight: 600;
+  color: black;
+  margin: 12px 0 8px 0;
+}
+
+/* Responsive - mobile first */
+@media (max-width: 768px) {
+  .queue-box {
+    padding: 20px 14px;
+    max-width: 90%;
+  }
+}
+
+/* Desktop enhancements */
+@media (min-width: 769px) {
+  .queue-box {
+    max-width: 420px;
+  }
+}
+
+.order-more {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.order-more-link {
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+  font-size: 14px;
+
+}
+
+.order-more-link:hover {
+  text-decoration: underline;
+}

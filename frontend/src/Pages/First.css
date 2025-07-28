@@ -1,0 +1,36 @@
+/* For the wrapper */
+.first-wrapper {
+  background-color: #efff52;
+  /* green background */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Yellow box for mobile */
+.smartprint-box {
+  background-color: #efff52;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  font-weight: bold;
+  border-radius: 20px;
+  /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); */
+  width: 300px;
+  height: 500px;
+}
+
+/* Desktop override: remove yellow card, go fullscreen */
+@media (min-width: 768px) {
+  .smartprint-box {
+    background: none;
+    box-shadow: none;
+    font-weight: bold;
+    font-size: 50px;
+    width: auto;
+    height: auto;
+
+  }
+}

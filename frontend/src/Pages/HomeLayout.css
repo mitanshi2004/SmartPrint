@@ -1,0 +1,242 @@
+/* Mobile & Desktop shared */
+.home-container {
+  background-color: #efff52;
+  color: rgb(15, 15, 15);
+  padding: 20px;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  overflow-y: auto;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.top-icon {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.subtext {
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.print-now {
+  padding: 12px 20px;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+/* Product grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.grid-item {
+  background-color: white;
+  color: black;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.grid-item:hover {
+  transform: scale(1.05);
+}
+
+.grid-img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+
+.overlay-text {
+  padding: 8px;
+}
+
+.item-title {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.item-price {
+  font-size: 12px;
+  color: #555;
+}
+
+/* Bottom link */
+.status-link {
+  margin-top: 40px;
+  font-weight: 500;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Desktop layout (≥768px) */
+@media (min-width: 768px) {
+  .home-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    box-sizing: border-box;
+    min-height: 100vh;
+    /* ✅ allow growth */
+    overflow-y: auto;
+    /* ✅ allow scroll */
+  }
+
+  .home-container {
+    animation: floatUpDown 3s ease-in-out infinite;
+  }
+
+  @keyframes floatUpDown {
+
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+
+    50% {
+      transform: translateY(-1px);
+      /* move up */
+    }
+  }
+
+
+  /* 
+.sidebar {
+  position: fixed;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  background-color: white;
+  overflow: hidden;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 60px;
+  text-align: center;
+  width: 300px;  /* ⬅ increased from 80px */
+  /* height: 100vh;   
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+  .home-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    box-sizing: border-box;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .top-icon {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1rem;
+    color: #444;
+
+  }
+
+  .subtext {
+    margin-top: 1.2rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #333;
+  }
+
+  .print-now {
+    display: block;
+    margin: 10px auto;
+    background-color: white;
+    color: black;
+    padding: 11px 250px;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    width: auto;
+    margin: 5px auto;
+    /* 👈 This centers the button */
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem;
+    /* compact spacing */
+    padding: 1rem;
+    width: 100%;
+    max-width: 1200px;
+    /* optional: prevents being too stretched on very large screens */
+    margin: 0 auto;
+    /* center align the grid */
+  }
+
+  .grid-item {
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+
+  .grid-item:hover {
+    transform: scale(1.02);
+  }
+
+  .grid-img {
+    width: 100%;
+    /* FULL width of card */
+    height: 150px;
+    /* Slightly larger */
+    object-fit: cover;
+  }
+
+  .overlay-text {
+    padding: 0.5rem;
+    background-color: white;
+  }
+
+  .item-title {
+    font-size: 1rem;
+  }
+
+  .item-price {
+    font-size: 0.85rem;
+  }
+
+  .status-link {
+    padding-top: 0.3rem;
+    font-size: 1rem;
+    color: black;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+}
+
+/* Hide sidebar on mobile */
+/* @media (max-width: 767px) {
+  .sidebar {
+    display: none;
+  }
+} */

@@ -1,0 +1,246 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lexend', sans-serif;
+}
+/* Global Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  font-family: 'Lexend', sans-serif;
+  overflow-x: hidden;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.box {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  width: 300px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  background-color: #f6f6f6;
+}
+
+input {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+}
+
+button {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 30px;
+  background: #efff52;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+h1, h2, h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.home-page {
+  display: flex;
+  min-height: 100vh;   /* ✅ Allow it to grow */
+  width: 100%;
+  align-items: center;
+  flex-direction: row;
+}
+
+/* .sidebar {
+  position: fixed;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  background-color: white;
+  overflow: hidden;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 60px;
+  text-align: center;
+  width: 300px;  /* ⬅ increased from 80px */
+  /* height: 100vh;   
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */ 
+
+.form-right {
+  background-color:  #efff52;
+  color: rgb(15, 15, 15);
+  padding: 20px;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.form-box {
+  background-color: white;
+  padding: 3.2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  width: 700px;
+  max-width: 1000px;
+}
+
+/* .form-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+} */
+
+/* .input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+} */
+
+/* input[type="file"],
+input[type="number"],
+input[type="text"],
+textarea,
+select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-family: 'Lexend', sans-serif;
+}
+
+textarea {
+  resize: vertical;
+} */
+
+/* button {
+  background-color: black;
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+ */
+button:hover {
+  background-color: black;
+  color: white;
+}
+
+@media (max-width: 767px) {
+
+/* Main container with green background */
+.form-right {
+  background-color: #efff52;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center form vertically too */
+  padding: 2rem 1rem;
+}
+
+/* White card wrapper */
+.form-box {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Form layout inside box */
+.form-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/* Labels and Inputs */
+.input-group label {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-family: inherit;
+  background: #f9f9f9;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Button */
+button[type="submit"] {
+  padding: 12px;
+  background-color: black;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #222;
+}
+
+/* Headline */
+.form-box h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+}
